@@ -2,6 +2,7 @@ import Behaviours.IPlayable;
 import Behaviours.ISellable;
 import Instruments.Clarinet;
 import Instruments.Instruments;
+import Accessories.*;
 
 import javax.sound.midi.Instrument;
 import java.util.ArrayList;
@@ -9,10 +10,8 @@ import java.util.ArrayList;
 public class Shop {
 
     private String name;
-    //private Instruments instrument;
     private ISellable sellableItems;
     private ArrayList<ISellable> stock;
-    //private IPlayable tryOutInstrument;
     private ArrayList<ISellable> soldStock;
     private double till;
 
@@ -31,7 +30,7 @@ public class Shop {
         return stock;
     }
 
-    public void addStock(ISellable itemToAdd){
+    public void addStock(ISellable itemToAdd) {
         stock.add(itemToAdd);
     }
 
@@ -47,20 +46,14 @@ public class Shop {
         return till;
     }
 
-    public void takeFromStockAddToSellStock(ISellable itemToAdd){
-        sellStock(itemToAdd);
+    public void takeFromStockAddToSellStock(ISellable itemToAdd) {
+        sellStock();
         soldStock.add(itemToAdd);
     }
 
-    public void sellStock(ISellable itemToSell){
+    public void sellStock() {
         stock.remove(0);
     }
-
-    // I want to see what the name of the object is at index 0 in the soldStock arraylist
-//    public String checkStockTypeInIndex0(ArrayList stock){
-//
-//        return getSoldStock().get(0).
-//    }
 
     public void addCashToTill(Instruments instrumentSold) {
         takeFromStockAddToSellStock(instrumentSold);
@@ -68,19 +61,53 @@ public class Shop {
         this.till = cash += getTill();
     }
 
-    public double potentialProfitFromStock(){
+    public double potentialProfitFromStock() {
         double potentialProfit = 0;
 
-        for (int i = 0; i < stock.size(); i++){
+        for (int i = 0; i < stock.size(); i++) {
             potentialProfit += stock.get(i).calculateMarkup();
         }
 
         return potentialProfit;
 
-//        return stock.get(0).calculateMarkup() + stock.get(1).calculateMarkup();
     }
 
-    public double profitFromSoldItems(){
-        return soldStock.get(0).calculateMarkup();
+    public double profitFromSoldItems() {
+
+        double profit = 0;
+
+        for (int i = 0; i < soldStock.size(); i++){
+            profit += soldStock.get(i).calculateMarkup();
+        }
+
+        return profit;
     }
+
+// returns a string of instrument name for the ISellable found in soldStock array: but only if the item sold is an instrument. This won't work if the item is an accessory.
+    public String checkSoldStockName(){
+        Instruments instrument = (Instruments) getSoldStock().get(0);
+
+        return instrument.getInstrumentName();
+
+    }
+
+    // returns a string of accessory name for the ISellable found in Stock array: but only if the item in the stock is an accessory. This won't work if the item is an instrument.
+
+    public String checkStockName(){
+       Accessory accessory = (Accessory) getStock().get(0);
+
+       return accessory.getName();
+
+//        if (getStock().get(0).getClass() == Instruments){
+//
+//        Instruments instrument = (Instruments) getStock().get(0);
+//
+//        return instrument.getInstrumentName()};
+//
+//        else if (getStock().get(0).getClass() == Instruments)
+//            return acce
+
+    }
+
+
 }

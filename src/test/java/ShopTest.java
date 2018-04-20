@@ -64,7 +64,7 @@ public class ShopTest {
 
     @Test
     public void shopCanSell(){
-        shop1.sellStock(clarinet1);
+        shop1.sellStock();
         assertEquals(1, shop1.getStock().size());
         assertEquals(reed1.getClass(), shop1.getStock().get(0).getClass());
     }
@@ -75,7 +75,8 @@ public class ShopTest {
         shop1.takeFromStockAddToSellStock(clarinet1);
         assertEquals(2, shop1.getStock().size());
         assertEquals(1, shop1.getSoldStock().size());
-        //assertEquals("B flat", shop1.getSoldStock().get(0).);
+        assertEquals("B Flat", shop1.checkSoldStockName());
+        assertEquals("Rico", shop1.checkStockName());
     }
 
     @Test
@@ -92,9 +93,11 @@ public class ShopTest {
 
     @Test
     public void shopProfitFromSold(){
+        shop1.addStock(frenchHorn1);
         shop1.takeFromStockAddToSellStock(clarinet1);
-        assertEquals(250, shop1.profitFromSoldItems(), 0.01);
-        assertEquals(1.5, shop1.potentialProfitFromStock(), 0.01);
+        shop1.takeFromStockAddToSellStock(reed1);
+        assertEquals(251.50, shop1.profitFromSoldItems(), 0.01);
+        assertEquals(400, shop1.potentialProfitFromStock(), 0.01);
     }
 
 }
