@@ -69,7 +69,15 @@ public class Shop {
     }
 
     public double potentialProfitFromStock(){
-        return stock.get(0).calculateMarkup() + stock.get(1).calculateMarkup();
+        double potentialProfit = 0;
+
+        for (int i = 0; i < stock.size(); i++){
+            potentialProfit += stock.get(i).calculateMarkup();
+        }
+
+        return potentialProfit;
+
+//        return stock.get(0).calculateMarkup() + stock.get(1).calculateMarkup();
     }
 
     public double profitFromSoldItems(){

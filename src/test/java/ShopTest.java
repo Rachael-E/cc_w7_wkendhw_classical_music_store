@@ -92,10 +92,9 @@ public class ShopTest {
 
     @Test
     public void shopProfitFromSold(){
-        shop1.addStock(frenchHorn1);
         shop1.takeFromStockAddToSellStock(clarinet1);
         assertEquals(250, shop1.profitFromSoldItems(), 0.01);
-        assertEquals(401.5, shop1.potentialProfitFromStock(), 0.01);
+        assertEquals(1.5, shop1.potentialProfitFromStock(), 0.01);
     }
 
 }

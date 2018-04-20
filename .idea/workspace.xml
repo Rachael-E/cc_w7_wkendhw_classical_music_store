@@ -47,8 +47,8 @@
           <file leaf-file-name="Shop.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/Shop.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="449">
-                  <caret line="75" column="50" lean-forward="false" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
+                <state relative-caret-position="266">
+                  <caret line="77" column="31" lean-forward="false" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#689#690#0" expanded="true" />
@@ -65,10 +65,8 @@
                     <element signature="e#1147#1148#0" expanded="true" />
                     <element signature="e#1334#1335#0" expanded="true" />
                     <element signature="e#1365#1366#0" expanded="true" />
-                    <element signature="e#1827#1828#0" expanded="true" />
-                    <element signature="e#1913#1914#0" expanded="true" />
-                    <element signature="e#1955#1956#0" expanded="true" />
-                    <element signature="e#2012#2013#0" expanded="true" />
+                    <element signature="e#2149#2150#0" expanded="true" />
+                    <element signature="e#2206#2207#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -138,7 +136,7 @@
             <entry file="file://$PROJECT_DIR$/src/test/java/ShopTest.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="285">
-                  <caret line="97" column="26" lean-forward="false" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
+                  <caret line="96" column="21" lean-forward="true" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1002#1003#0" expanded="true" />
@@ -486,7 +484,6 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-52" />
     <option name="y" value="23" />
     <option name="width" value="1409" />
     <option name="height" value="817" />
@@ -749,15 +746,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ShopTest - 2018.04.20 at 14h 00m 55s.xml">
-      <configuration name="ShopTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ShopTest - 2018.04.20 at 14h 01m 19s.xml">
-      <configuration name="ShopTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ShopTest - 2018.04.20 at 14h 01m 45s.xml">
-      <configuration name="ShopTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ShopTest - 2018.04.20 at 14h 01m 52s.xml">
       <configuration name="ShopTest" configurationId="JUnit" />
     </history-entry>
@@ -779,9 +767,18 @@
     <history-entry file="ShopTest - 2018.04.20 at 14h 11m 17s.xml">
       <configuration name="ShopTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ShopTest - 2018.04.20 at 15h 03m 36s.xml">
+      <configuration name="ShopTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShopTest - 2018.04.20 at 15h 03m 45s.xml">
+      <configuration name="ShopTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShopTest - 2018.04.20 at 15h 03m 50s.xml">
+      <configuration name="ShopTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-52" y="23" width="1409" height="817" extended-state="0" />
+    <frame x="0" y="23" width="1409" height="817" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -902,8 +899,8 @@
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="false" />
+            <element signature="e#308#309#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -941,16 +938,16 @@
         <state relative-caret-position="-135">
           <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
           <folding>
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#633#634#0" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="false" />
+            <element signature="e#525#526#0" expanded="false" />
+            <element signature="e#563#564#0" expanded="false" />
+            <element signature="e#597#598#0" expanded="false" />
+            <element signature="e#633#634#0" expanded="false" />
+            <element signature="e#665#666#0" expanded="false" />
+            <element signature="e#703#704#0" expanded="false" />
+            <element signature="e#737#738#0" expanded="false" />
+            <element signature="e#790#791#0" expanded="false" />
+            <element signature="e#846#847#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1017,8 +1014,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Shop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="75" column="50" lean-forward="false" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
+        <state relative-caret-position="266">
+          <caret line="77" column="31" lean-forward="false" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#689#690#0" expanded="true" />
@@ -1035,10 +1032,8 @@
             <element signature="e#1147#1148#0" expanded="true" />
             <element signature="e#1334#1335#0" expanded="true" />
             <element signature="e#1365#1366#0" expanded="true" />
-            <element signature="e#1827#1828#0" expanded="true" />
-            <element signature="e#1913#1914#0" expanded="true" />
-            <element signature="e#1955#1956#0" expanded="true" />
-            <element signature="e#2012#2013#0" expanded="true" />
+            <element signature="e#2149#2150#0" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1046,7 +1041,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/ShopTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="97" column="26" lean-forward="false" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
+          <caret line="96" column="21" lean-forward="true" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1002#1003#0" expanded="true" />
