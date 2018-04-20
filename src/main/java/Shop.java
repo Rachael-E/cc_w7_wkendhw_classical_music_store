@@ -1,13 +1,18 @@
 import Behaviours.IPlayable;
 import Behaviours.ISellable;
+import Instruments.Clarinet;
+import Instruments.Instruments;
 
+import javax.sound.midi.Instrument;
 import java.util.ArrayList;
 
 public class Shop {
 
     private String name;
+    //private Instruments instrument;
+    private ISellable sellableItems;
     private ArrayList<ISellable> stock;
-    private IPlayable tryOutInstrument;
+    //private IPlayable tryOutInstrument;
     private ArrayList<ISellable> soldStock;
     private double till;
 
@@ -15,6 +20,7 @@ public class Shop {
         this.name = name;
         this.stock = stock;
         this.till = till;
+        this.soldStock = new ArrayList<>();
     }
 
     public String getName() {
@@ -25,8 +31,12 @@ public class Shop {
         return stock;
     }
 
-    public IPlayable getTryOutInstrument() {
-        return tryOutInstrument;
+    public void addStock(ISellable itemToAdd){
+        stock.add(itemToAdd);
+    }
+
+    public String demonstrateAnInstrument(IPlayable instrumentToDemonstrate) {
+        return instrumentToDemonstrate.play();
     }
 
     public ArrayList<ISellable> getSoldStock() {
@@ -37,15 +47,24 @@ public class Shop {
         return till;
     }
 
-    public void setStock(ArrayList<ISellable> stock) {
-        this.stock = stock;
+    public void takeFromStockAddToSellStock(ISellable itemToAdd){
+        sellStock(itemToAdd);
+        soldStock.add(itemToAdd);
     }
 
-    public void setSoldStock(ArrayList<ISellable> soldStock) {
-        this.soldStock = soldStock;
+    public void sellStock(ISellable itemToSell){
+        stock.remove(0);
     }
 
-    public void addCashToTill(double cash) {
+    // I want to see what the name of the object is at index 0 in the soldStock arraylist
+//    public String checkStockTypeInIndex0(ArrayList stock){
+//
+//        return getSoldStock().get(0).
+//    }
+
+    public void addCashToTill(Instruments instrumentSold) {
+        takeFromStockAddToSellStock(instrumentSold);
+        double cash = instrumentSold.getSellPrice();
         this.till = cash += getTill();
     }
 }
