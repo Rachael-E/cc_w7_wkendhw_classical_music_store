@@ -58,7 +58,7 @@ public class Shop {
     public void addCashToTill(Instruments instrumentSold) {
         takeFromStockAddToSellStock(instrumentSold);
         double cash = instrumentSold.getSellPrice();
-        this.till = cash += getTill();
+        till = cash + getTill();
     }
 
     public double potentialProfitFromStock() {
@@ -83,31 +83,32 @@ public class Shop {
         return profit;
     }
 
-// returns a string of instrument name for the ISellable found in soldStock array: but only if the item sold is an instrument. This won't work if the item is an accessory.
-    public String checkSoldStockName(){
-        Instruments instrument = (Instruments) getSoldStock().get(0);
 
-        return instrument.getInstrumentName();
-
+    public String getNameOfFirstItemInStock(){
+        return getStock().get(0).getName();
     }
+
+    public String getNameOfFirstItemInSoldStock(){
+        return getSoldStock().get(0).getName();
+    }
+
+
+    /// Examples of Casting: redundant now that ISellable enforces a getName method.
+    // returns a string of instrument name for the ISellable found in soldStock array: but only if the item sold is an instrument. This won't work if the item is an accessory.
+//    public String getNameOfFirstSoldItem(){
+//        Instruments instrument = (Instruments) getSoldStock().get(0);
+//
+//        return instrument.getInstrumentName();
+//
+//    }
 
     // returns a string of accessory name for the ISellable found in Stock array: but only if the item in the stock is an accessory. This won't work if the item is an instrument.
 
-    public String checkStockName(){
-       Accessory accessory = (Accessory) getStock().get(0);
-
-       return accessory.getName();
-
-//        if (getStock().get(0).getClass() == Instruments){
+//    public String checkNameOfFirstItemInStock(){
+//        Accessory accessory = (Accessory) getStock().get(0);
 //
-//        Instruments instrument = (Instruments) getStock().get(0);
-//
-//        return instrument.getInstrumentName()};
-//
-//        else if (getStock().get(0).getClass() == Instruments)
-//            return acce
-
-    }
+//        return accessory.getName();
+//    }
 
 
 }

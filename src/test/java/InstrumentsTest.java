@@ -19,7 +19,7 @@ public class InstrumentsTest {
 
     @Test
     public void clarinetHasName(){
-        assertEquals("B Flat", clarinet1.getInstrumentName());
+        assertEquals("B Flat", clarinet1.getName());
     }
 
     @Test
@@ -49,7 +49,7 @@ public class InstrumentsTest {
 
     @Test
     public void oboeHasName(){
-        assertEquals("Contrabass", oboe1.getInstrumentName());
+        assertEquals("Contrabass", oboe1.getName());
     }
 
     @Test

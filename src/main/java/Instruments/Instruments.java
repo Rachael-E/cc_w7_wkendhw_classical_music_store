@@ -5,20 +5,20 @@ import InstrumentType.InstrumentType;
 
 public abstract class Instruments implements ISellable {
 
-    private String instrumentName;
+    private String name;
     private double boughtPrice;
     private double sellPrice;
     private InstrumentType instrumentType;
 
-    public Instruments(String instrumentName, double boughtPrice, double sellPrice, InstrumentType instrumentType) {
-        this.instrumentName = instrumentName;
+    public Instruments(String name, double boughtPrice, double sellPrice, InstrumentType instrumentType) {
+        this.name = name;
         this.boughtPrice = boughtPrice;
         this.sellPrice = sellPrice;
         this.instrumentType = instrumentType;
     }
 
-    public String getInstrumentName() {
-        return instrumentName;
+    public String getName() {
+        return name;
     }
 
     public double getBoughtPrice() {

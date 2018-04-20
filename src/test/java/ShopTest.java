@@ -75,8 +75,8 @@ public class ShopTest {
         shop1.takeFromStockAddToSellStock(clarinet1);
         assertEquals(2, shop1.getStock().size());
         assertEquals(1, shop1.getSoldStock().size());
-        assertEquals("B Flat", shop1.checkSoldStockName());
-        assertEquals("Rico", shop1.checkStockName());
+        assertEquals("B Flat", shop1.getNameOfFirstItemInSoldStock());
+        assertEquals("Rico", shop1.getNameOfFirstItemInStock());
     }
 
     @Test
@@ -88,7 +88,8 @@ public class ShopTest {
 
     @Test
     public void shopCanGetPotentialProfitFromItemsInStock(){
-        assertEquals(251.5, shop1.potentialProfitFromStock(), 0.01);
+        shop1.addStock(frenchHorn1);
+        assertEquals(651.5, shop1.potentialProfitFromStock(), 0.01);
     }
 
     @Test
