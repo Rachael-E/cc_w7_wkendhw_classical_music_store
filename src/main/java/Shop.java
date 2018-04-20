@@ -1,16 +1,11 @@
 import Behaviours.IPlayable;
 import Behaviours.ISellable;
-import Instruments.Clarinet;
-import Instruments.Instruments;
-import Accessories.*;
 
-import javax.sound.midi.Instrument;
 import java.util.ArrayList;
 
 public class Shop {
 
     private String name;
-    private ISellable sellableItems;
     private ArrayList<ISellable> stock;
     private ArrayList<ISellable> soldStock;
     private double till;
@@ -55,7 +50,7 @@ public class Shop {
         stock.remove(0);
     }
 
-    public void addCashToTill(Instruments instrumentSold) {
+    public void addCashToTill(ISellable instrumentSold) {
         takeFromStockAddToSellStock(instrumentSold);
         double cash = instrumentSold.getSellPrice();
         till = cash + getTill();
@@ -76,21 +71,27 @@ public class Shop {
 
         double profit = 0;
 
-        for (int i = 0; i < soldStock.size(); i++){
+        for (int i = 0; i < soldStock.size(); i++) {
             profit += soldStock.get(i).calculateMarkup();
         }
 
         return profit;
     }
 
-
-    public String getNameOfFirstItemInStock(){
+    // complete by writing a for loop to get all names of items in stock
+    public String getNameOfFirstItemInStock() {
         return getStock().get(0).getName();
     }
 
-    public String getNameOfFirstItemInSoldStock(){
+    // complete by writing a for loops to get all names of items in stock
+    public String getNameOfFirstItemInSoldStock() {
         return getSoldStock().get(0).getName();
     }
+
+}
+
+
+
 
 
     /// Examples of Casting: redundant now that ISellable enforces a getName method.
@@ -111,4 +112,4 @@ public class Shop {
 //    }
 
 
-}
+
