@@ -1,4 +1,8 @@
-import javax.sound.midi.Instrument;
+package Instruments;
+
+import Behaviours.IPlayable;
+import InstrumentType.InstrumentType;
+import Instruments.Instruments;
 
 public class Clarinet extends Instruments implements IPlayable {
 

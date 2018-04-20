@@ -1,3 +1,8 @@
+package Instruments;
+
+import Behaviours.IPlayable;
+import InstrumentType.InstrumentType;
+
 public class FrenchHorn extends Instruments implements IPlayable {
 
     public FrenchHorn(String instrumentName, double boughtPrice, double sellPrice, InstrumentType instrumentType) {

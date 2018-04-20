@@ -1,3 +1,6 @@
+import Instruments.*;
+
+import InstrumentType.InstrumentType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +13,8 @@ public class InstrumentsTest {
 
     @Before
     public void before() {
-        clarinet1 = new Clarinet("B Flat", 750, 1000, InstrumentType.CLARINET);
+        clarinet1 = new Clarinet("B Flat", 750, 1000, InstrumentType.WOODWIND);
+        oboe1 = new Oboe("Contrabass", 750, 1000, InstrumentType.WOODWIND);
     }
 
     @Test
@@ -30,7 +34,7 @@ public class InstrumentsTest {
 
     @Test
     public void clarinetHasInstrumentType(){
-        assertEquals(InstrumentType.CLARINET, clarinet1.getInstrumentType());
+        assertEquals(InstrumentType.WOODWIND, clarinet1.getInstrumentType());
     }
 
     @Test
@@ -41,6 +45,36 @@ public class InstrumentsTest {
     @Test
     public void clarinetHasMarkUp(){
         assertEquals(250, clarinet1.calculateMarkup(), 0.1);
+    }
+
+    @Test
+    public void oboeHasName(){
+        assertEquals("Contrabass", oboe1.getInstrumentName());
+    }
+
+    @Test
+    public void oboeHasBoughtPrice(){
+        assertEquals(750, oboe1.getBoughtPrice(), 0.1);
+    }
+
+    @Test
+    public void oboeHasSellPrice(){
+        assertEquals(1000, oboe1.getSellPrice(), 0.1);
+    }
+
+    @Test
+    public void oboeHasInstrumentType(){
+        assertEquals(InstrumentType.WOODWIND, oboe1.getInstrumentType());
+    }
+
+    @Test
+    public void oboeCanPlay(){
+        assertEquals("I am the echo in Berlioz Symphonie Fantastique!", oboe1.play());
+    }
+
+    @Test
+    public void oboeHasMarkUp(){
+        assertEquals(250, oboe1.calculateMarkup(), 0.1);
     }
 
 }

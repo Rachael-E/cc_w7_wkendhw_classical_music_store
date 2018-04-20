@@ -1,9 +1,10 @@
+package InstrumentType;
+
 public enum InstrumentType {
 
-    CLARINET("Clarinet"),
-    OBOE("Oboe"),
-    VIOLIN("Violin"),
-    FRENCHHORN("French Horn");
+    WOODWIND("Woodwind"),
+    STRING("String"),
+    BRASS("Brass");
 
     private String instrumentName;
 

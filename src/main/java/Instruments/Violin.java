@@ -1,3 +1,8 @@
+package Instruments;
+import Behaviours.IPlayable;
+import InstrumentType.InstrumentType;
+import Instruments.Instruments;
+
 public class Violin extends Instruments implements IPlayable {
 
     public Violin(String instrumentName, double boughtPrice, double sellPrice, InstrumentType instrumentType) {
