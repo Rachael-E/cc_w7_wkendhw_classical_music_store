@@ -67,4 +67,12 @@ public class Shop {
         double cash = instrumentSold.getSellPrice();
         this.till = cash += getTill();
     }
+
+    public double potentialProfitFromStock(){
+        return stock.get(0).calculateMarkup() + stock.get(1).calculateMarkup();
+    }
+
+    public double profitFromSoldItems(){
+        return soldStock.get(0).calculateMarkup();
+    }
 }
