@@ -1,4 +1,4 @@
-public abstract class Instruments {
+public abstract class Instruments implements ISellable {
 
     private String instrumentName;
     private double boughtPrice;
@@ -26,5 +26,10 @@ public abstract class Instruments {
 
     public InstrumentType getInstrumentType() {
         return instrumentType;
+    }
+
+    @Override
+    public double calculateMarkup() {
+        return getSellPrice() - getBoughtPrice();
     }
 }
