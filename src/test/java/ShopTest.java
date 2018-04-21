@@ -77,6 +77,7 @@ public class ShopTest {
         assertEquals(1, shop1.getSoldStock().size());
         assertEquals("B Flat", shop1.getNameOfFirstItemInSoldStock());
         assertEquals("Rico", shop1.getNameOfFirstItemInStock());
+        assertEquals("Items in stock: 'Rico''Yamaha'", shop1.getNamesOfAllItemsInStock());
     }
 
     @Test
@@ -99,6 +100,7 @@ public class ShopTest {
         shop1.takeFromStockAddToSellStock(reed1);
         assertEquals(251.50, shop1.profitFromSoldItems(), 0.01);
         assertEquals(400, shop1.potentialProfitFromStock(), 0.01);
+        assertEquals("Items sold: 'B Flat''Rico'", shop1.getNamesOfAllItemsInSoldStock());
     }
 
 }

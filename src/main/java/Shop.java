@@ -78,14 +78,31 @@ public class Shop {
         return profit;
     }
 
-    // complete by writing a for loop to get all names of items in stock
     public String getNameOfFirstItemInStock() {
         return getStock().get(0).getName();
+    }
+// this is nice but isn't neat as it adds a comma at the end of the array list?
+    public String getNamesOfAllItemsInStock() {
+        String stockNames = "Items in stock: ";
+
+        for (int i = 0; i < stock.size(); i++) {
+            stockNames += "'" + getStock().get(i).getName() + "'";
+        }
+        return stockNames;
     }
 
     // complete by writing a for loops to get all names of items in stock
     public String getNameOfFirstItemInSoldStock() {
         return getSoldStock().get(0).getName();
+    }
+
+    public String getNamesOfAllItemsInSoldStock() {
+        String soldStockNames = "Items sold: ";
+        for (int i = 0; i < soldStock.size(); i++){
+            soldStockNames += "'" + getSoldStock().get(i).getName() + "'";
+        }
+
+        return soldStockNames;
     }
 
 }
